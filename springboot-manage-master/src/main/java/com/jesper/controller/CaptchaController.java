@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -35,7 +36,7 @@ public class CaptchaController {
      * @return
      * @throws Exception
      */
-    @GetMapping("/kaptcha/getKaptchaImage")
+    @GetMapping("kaptcha/getKaptchaImage")
     public ModelAndView getKaptchaImage(HttpServletRequest request, HttpServletResponse response) throws Exception {
         HttpSession session = request.getSession();
         String code = (String)session.getAttribute(Constants.KAPTCHA_SESSION_KEY);

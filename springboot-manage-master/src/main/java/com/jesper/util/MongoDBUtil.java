@@ -46,7 +46,7 @@ public class MongoDBUtil {
     private static Mongo MongoConnectionHolder() {
         List<ServerAddress> addresses = new ArrayList<>();
         // ServerAddress()两个参数分别为 服务器地址 和 端口
-        ServerAddress serverAddress = new ServerAddress("192.168.87.135", 27017);
+        ServerAddress serverAddress = new ServerAddress("192.168.87.140", 27017);
         addresses.add(serverAddress);
 
         //MongoCredential.createScramSha1Credential()三个参数分别为 用户名 数据库名称 密码

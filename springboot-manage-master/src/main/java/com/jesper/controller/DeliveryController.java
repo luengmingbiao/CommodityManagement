@@ -69,11 +69,11 @@ public class DeliveryController {
         //根据物流公司中文名去查询其公司编号
         StringBuilder url = new StringBuilder("https://m.kuaidi100.com/query?");
         url.append("type=").append(deliveryCode).append("&").append("postid=").append(expressNo);
-        String content = HttpRequest.readData(url.toString(), "POST");
-        JSONObject responseJson = JSONObject.parseObject(content);
-        JSONArray result = responseJson.getJSONArray("data");
+    String content = HttpRequest.readData(url.toString(), "POST");
+    JSONObject responseJson = JSONObject.parseObject(content);
+    JSONArray result = responseJson.getJSONArray("data");
         return result;
-    }
+}
 
     @GetMapping("user/deliveryEdit")
     public String deliveryEditGet(Model model, Delivery delivery){

@@ -3,17 +3,17 @@
 <mapper namespace="com.jesper.mapper.OrderShippingMapper">
     <resultMap id="BaseResultMap" type="com.jesper.model.OrderShipping">
         <id column="order_id" jdbcType="VARCHAR" property="orderId"/>
-        <result column="receiver_name" jdbcType="VARCHAR" property="receiverName"/>
-        <result column="receiver_phone" jdbcType="VARCHAR" property="receiverPhone"/>
-        <result column="receiver_mobile" jdbcType="VARCHAR" property="receiverMobile"/>
-        <result column="receiver_state" jdbcType="VARCHAR" property="receiverState"/>
-        <result column="receiver_city" jdbcType="VARCHAR" property="receiverCity"/>
-        <result column="receiver_district" jdbcType="VARCHAR" property="receiverDistrict"/>
-        <result column="receiver_address" jdbcType="VARCHAR" property="receiverAddress"/>
-        <result column="receiver_zip" jdbcType="VARCHAR" property="receiverZip"/>
-        <result column="created" jdbcType="TIMESTAMP" property="created"/>
-        <result column="updated" jdbcType="TIMESTAMP" property="updated"/>
-    </resultMap>
+    <result column="receiver_name" jdbcType="VARCHAR" property="receiverName"/>
+    <result column="receiver_phone" jdbcType="VARCHAR" property="receiverPhone"/>
+    <result column="receiver_mobile" jdbcType="VARCHAR" property="receiverMobile"/>
+    <result column="receiver_state" jdbcType="VARCHAR" property="receiverState"/>
+    <result column="receiver_city" jdbcType="VARCHAR" property="receiverCity"/>
+    <result column="receiver_district" jdbcType="VARCHAR" property="receiverDistrict"/>
+    <result column="receiver_address" jdbcType="VARCHAR" property="receiverAddress"/>
+    <result column="receiver_zip" jdbcType="VARCHAR" property="receiverZip"/>
+    <result column="created" jdbcType="TIMESTAMP" property="created"/>
+    <result column="updated" jdbcType="TIMESTAMP" property="updated"/>
+</resultMap>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from tb_order_shipping
     where order_id = #{orderId,jdbcType=VARCHAR}
